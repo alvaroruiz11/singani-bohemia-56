@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: BwMitga-Bold;
+    src: url('./fonts/bwmitga/BwMitga-Bold.otf'); 
+}
+@font-face {
+    font-family: BwMitga-Regular;
+    src: url('./fonts/bwmitga/BwMitga-Regular.otf'); 
+}
+@font-face {
+    font-family: BwMitga-Light;
+    src: url('./fonts/bwmitga/BwMitga-Light.otf'); 
+}
+
+
+.scroll-stop {
+    overflow: hidden;
+}
+
+.bg-primary {
+    background-color: #ebcd86;
+}
+
+.text-primary {
+    color: #ebcd86;
+}
+
+.font-bwmitga-bold {
+    font-family: BwMitga-Bold;
+}
+.font-bwmitga-regular {
+    font-family: BwMitga-Regular;
+}
+.font-bwmitga-light {
+    font-family: BwMitga-Light;
+}
+
+
+
+/* article */
+.article-about {
+    background-image: url('/assets/carousel/bohemia-carousel-1.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 650px;
+}
+
+.article-about .bg {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.article-pinture {
+    background-image: url('/assets/painting/abuelos-chiquitanos.jpg');
+    background-size: cover;
+    height: 680px;
+}
+
+.article-pinture a {
+    border: 1px solid #ebcd86;
+}
+
+.swiper-button-prev, 
+.swiper-button-next {
+    color: black;
+}
+
+.swiper-button-prev::after, 
+.swiper-button-next::after {
+    font-size: 20px;
+}
+
+.swiper-pagination {
+    margin-bottom: 2rem;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: black;
+}
+
+/* Loading */
+.loader {
+    animation: spinner-animation 1.5s linear infinite;
+}
+
+@keyframes spinner-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.mySwiperProduct .swiper-button-prev,
+.mySwiperProduct .swiper-button-next {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    color: white;
+    display: inline-flex;
+    height: 34px;
+    justify-content: center;
+    width: 34px;
+}
+
+.mySwiperProduct .swiper-button-prev::after, 
+.mySwiperProduct .swiper-button-next::after {
+    font-size: 16px;
+}
+
+
+.carousel-home {
+    height: calc( 100vh - 120px );
+    font-family: BwMitga-Bold;
+}
+
+.carousel-home .swiper-pagination-bullet-active {
+    background-color: white;
+}
+
+.text-carousel {
+    text-shadow: 3px 0px 8px rgba(0,0,0,0.5);
+}
+
+.bg-permission {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)) ,url('/assets/painting/abuelos-chiquitanos.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.painting-card img{
+    position: absolute;
+    
+    transition: transform .5s;
+}
+
+.painting-card:hover img {
+    transform: scale(1.4);
+}
+
+
+/* Modal */
+.ReactModalPortal > div{
+    opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: opacity .2s ease-in-out;
+    z-index: 999;
+}
+
+.modal-fondo {
+    background-color: rgba(0, 0, 0, 0.4);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+
+.modal {
+    display: inline;
+    outline: none;
+}
