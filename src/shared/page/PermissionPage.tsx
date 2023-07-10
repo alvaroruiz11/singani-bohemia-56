@@ -43,15 +43,13 @@ export const PermissionPage = () => {
     
 
   return (
-      <div className="bg-permission w-screen h-screen flex justify-center items-center">
-          {/* Container permission */}
-          <div className="px-8 py-6 rounded-sm shadow bg-white">
-              <div className="py-8">
-                {/* logo */}
-                <img src="/assets/logo-black.png" alt="Singani Bohemia 56" className="h-12 w-auto block mx-auto"/>
+      <div className="bg-permission w-screen h-screen flex justify-center items-center px-4">
+          <div className="px-8 pt-4 pb-6 rounded-sm shadow-sm bg-white">
+              <div className="pb-6 pt-4 md:pt-7">
+                <img src="/assets/logo-black.png" alt="Singani Bohemia 56" className="h-8 md:h-10 w-auto block mx-auto"/>
               </div>
-              <div className="text-center uppercase mb-10">
-                <h2 className="font-bwmitga-bold">Indique su fecha de nacimiento</h2>
+              <div className="text-center uppercase mb-5">
+                <h2 className="text-sm md:text-base font-bwmitga-bold">Indique su fecha de nacimiento</h2>
                 <small className="uppercase text-xs text-gray-400">Debemos de comprobar si eres mayor de 18 años</small>
               </div>
               <div>
@@ -60,7 +58,7 @@ export const PermissionPage = () => {
                   >
                       <select 
                         name="yearBirth" 
-                        className='w-full text-center border border-gray-300 py-3 rounded-sm focus:outline-none mb-4'
+                        className='w-full text-center text-sm md:text-base border border-gray-300 py-3 rounded-sm focus:outline-none mb-4'
                         onChange={ onChangeSelect }
                       >
                         {
@@ -77,7 +75,7 @@ export const PermissionPage = () => {
                           onChange={ onCheckChange }
                           checked={ isSaveDevice }
                         />
-                        <label htmlFor="check" className="uppercase ml-2 font-medium text-xs text-gray-400 select-none">
+                        <label htmlFor="check" className="ml-2 text-xs text-gray-500 select-none">
                           Recordarme en este dispositivo
                         </label>
                       </div>

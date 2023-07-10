@@ -11,7 +11,7 @@ export const ProductCard:FC<Props> = ({ product }) => {
 
   return (
     <div className={`w-60 overflow-hidden mb-28 mx-auto ${ product?.id.includes('clasico') ? 'bg-gray-50' : '' }`}> 
-        <img src={ product?.srcImg[0] } alt={ product?.title } className="h-80 block mx-auto" loading='lazy'/>
+        <img src={ product?.srcImg[0] } alt={ product?.title } className="h-72 md:h-80 block mx-auto"/>
         <div className="text-center font-bwmitga-bold pt-3">
             <h5 className="text-xs mb-2">{ product?.title }</h5>
             <p className={`${ product?.id.includes('clasico') ? 'text-gray-500' : 'text-primary' } text-xs mb-6`}>{ product?.namePainting }</p>

@@ -23,7 +23,7 @@ export const PaintingInfoPage = () => {
     <Container>
         <div className="flex justify-center" style={{ height: 450 }}>
             <div className="h-full relative">
-                    <img src={`/assets/painting/${ painting?.id }.jpg`} alt={ painting?.title } className='block h-full mx-auto w-auto rounded-sm'/>
+                    <img src={`/assets/painting/${ painting?.id }.jpg`} alt={ painting?.title } className='block h-full mx-auto w-auto rounded-sm object-cover'/>
                     <button 
                         className="absolute bg-white shadow-xl w-12 h-12 inline-flex -bottom-5 right-4 justify-center items-center rounded-full"
                         onClick={ openModal }
@@ -37,7 +37,7 @@ export const PaintingInfoPage = () => {
                 closeModal={ closeModal }
             />   
         </div>
-        <div className="py-10 px-9">
+        <div className="py-10 px-4 md:px-9">
             <hr />
             <div className="mt-4">
                 <h2 className="font-medium">{ painting?.title}</h2>

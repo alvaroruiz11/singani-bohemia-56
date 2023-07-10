@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { Container } from '../../shared';
 
 import { CarouselHome, ProductsSlide } from '../components'
 import { products } from '../../data';
@@ -12,62 +11,48 @@ export const HomePage = () => {
       <div>
         <CarouselHome/>
       </div>
-        <article className="py-16">
-          {/* Nustros singanis */}
-            <div className="uppercase text-center font-bwmitga-regular text-gray-400 mb-2">
-              <span className="text-xs">Descubre</span>
-            </div>
-            <h1 className="uppercase text-2xl md:text-3xl text-center font-bwmitga-bold mb-20">Nuestro singanis</h1>
+      <article className="article-about py-10 lg:py-16 bg-gray-50">
+          <div className="grid lg:grid-cols-2 gap-8">
+              <div className="text-center px-10 lg:px-40 flex flex-col justify-center items-center">
+                  <h3 className="text-xl md:text-2xl font-bwmitga-bold uppercase mb-4">Sobre nosotros</h3>
+                  <span className="text-sm md:text-base text-gray-400 mb-7">¡Descubre junto a nosotros, nuestro crecimiento por ser un nuevo concepto que está haciendo revolucíon ...</span>
+                  <Link
+                    to="/nosotros"
+                    className="mb-4 uppercase block text-xs py-4 px-6 border border-gray-300 ease-in duration-300 hover:tracking-widest"
+                  >
+                    Leer más
+                  </Link>
+              </div>
+              <div className="px-10 lg:px-24">
+                  <img src="/assets/todas-etiquetas.png" alt="Todas las etiquetas" className="w-5/6 block mx-auto h-auto"/>
+              </div>
+          </div>
+      </article>
+      <article className="py-10">
+          <div className="uppercase text-center font-bwmitga-regular text-gray-400 mb-2">
+            <span className="text-xs">Descubre</span>
+          </div>
+          <h1 className="uppercase text-xl md:text-2xl text-center font-bwmitga-bold mb-10">Nuestro singanis</h1>
             <ProductsSlide products={ products }/>     
-            <div className="flex justify-center">
-                <Link
-                  to={"/"}
-                  className="uppercase block text-xs py-4 px-6 border border-gray-300 ease-in duration-300 hover:tracking-widest"
-                >
-                  Ver todo nuestros singanis
-                </Link>
-            </div>
-          
-        </article>
-        <article className="article-about">
-          {/* sobre nosotros */}
-          <div className="bg w-full h-full">
-            <div className="flex justify-center items-center h-full flex-col px-10 lg:px-0">
-              <h1 className="text-white uppercase text-3xl lg:text-5xl text-center font-bwmitga-bold mb-5 shadow">Sobre nosotros</h1>
-              <p className="text-white text-center text-base lg:text-lg font-medium inline-block mb-10 shadow">¡Descubre junto a nosotros, nuestro crecimiento por ser un nuevo concepto que está haciendo revolución ...</p>
+          <div className="flex justify-center">
               <Link
-                  to="/nosotros"
-                  className="uppercase block text-xs py-4 px-6 border bg-white text-black font-medium shadow ease-in duration-300 hover:tracking-widest"
-                >
-                  Descubre sobre nosotros
-                </Link>
-            </div>
+                to={"/"}
+                className="uppercase block text-xs py-4 px-6 border border-gray-300 ease-in duration-300 hover:tracking-widest"
+              >
+                Ver todo nuestros singanis
+              </Link>
           </div>
         </article>
-        <article className="py-16">
-          <Container>
-            <div className="article-pinture flex justify-start items-center">
-                <div className="p-12 bg-white w-full lg:w-6/12 ml-0 lg:ml-20">
-                <div className="uppercase text-center lg:text-start font-bwmitga-regular text-gray-400 mb-1">
-                  <span className="text-xs">Descubre</span>
-                </div>
-                  <h1 className="uppercase text-3xl text-center lg:text-start font-bwmitga-bold mb-5">Pinturas</h1>
-                  <p className="font-bwmitga-light text-center lg:text-start mb-6 text-gray-400">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum cum adipisci nulla nam aspernatur laborum sint mollitia id magnam porro quis.
-                  </p>
-                  <div className="flex justify-center lg:justify-start">
-                  <Link
-                  to={"/"}
-                  className="uppercase block text-xs py-4 px-6 text-center lg:text-start font-bwmitga-regular ease-in duration-300 hover:tracking-widest"
+        <article className="py-10 article-pinture">
+            <div className="flex flex-col justify-center items-center h-full">
+                <h3 className="text-xl md:text-2xl text-center font-bwmitga-bold text-white mb-8">Descrubre nustras pinturas</h3>
+                <Link
+                  to="/pinturas"
+                  className="uppercase block text-xs py-4 px-6 bg-white ease-in duration-300 hover:tracking-widest"
                 >
-                  Aprende mas de nuestro arte
+                  Ver todo las pinturas
                 </Link>
-
-                  </div>
-                </div>
             </div>
-          </Container>
-          {/* pinturas */}
         </article>
     </>
   )

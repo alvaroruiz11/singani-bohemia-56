@@ -18,6 +18,10 @@ nav {
     color: white;
 }
 
+.nav-link.active {
+    color: white;
+}
+
 .nav-link::after {
     content: "";
     position: absolute;
@@ -35,6 +39,7 @@ nav {
 }
 
 
+
 /* Sidebar */
 
 aside {
@@ -43,6 +48,9 @@ aside {
     width: 100%;
     font-family: BwMitga-Bold;
     
+}
+.sidebar-link.active {
+    color: #ebcd86;
 }
 
 /* Footer */

@@ -29,9 +29,9 @@ export const PaintingModal:FC<Props> = ({ isOpenPaintingModal, closeModal, idPai
         onRequestClose={ closeModal }
         style={ customStyles }
         overlayClassName="modal-fondo"
-        // className="modal"
-        className="fixed h-screen modal py-2"
+        className="fixed md:h-screen modal px-3 md:py-2"
       >
+        
         <div className="h-full">
           <img src={`/assets/painting/${ idPainting }.jpg`} className="h-full w-auto block mx-auto"/>
         </div>

@@ -38,14 +38,11 @@ export const ProductsSlide: FC<Props> = ({ products }) => {
               spaceBetween: 100
             },
             '300': {
-              slidesPerView: 2,
+              slidesPerView: 1,
               spaceBetween: 150
             }
         }}
         modules={[ Navigation, Pagination ]}
-        grid={{
-          rows: 1,
-        }}
         navigation
         className="mySwiper"
       >

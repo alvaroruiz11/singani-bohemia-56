@@ -34,7 +34,7 @@ export const ProductImageSlide:FC<Props> = ({ imgs }) => {
               imgs.map( img => (
                 <SwiperSlide key={ img }>
                     <div style={{ height: 450 }}>
-                      <img src={ img } loading="lazy" className="h-full block mx-auto rounded"/>
+                      <img src={ img } loading="lazy" className="h-full block mx-auto rounded object-cover"/>
                     </div>
                 </SwiperSlide>
               ))

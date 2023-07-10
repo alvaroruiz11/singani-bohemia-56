@@ -3,7 +3,6 @@ import { Link, NavLink } from 'react-router-dom';
 import { HiOutlineBars3CenterLeft, HiOutlineXMark } from 'react-icons/hi2';
 
 import { UiContext } from '../../context';
-import { useScrollDownNavbar } from '../../hooks';
 import { routes } from '../../router/router';
 import  './NavBar.css';
 
@@ -14,16 +13,15 @@ export const NavBar = () => {
 
     const { onToggleSidebar, isOpenSidebar } = useContext( UiContext );
     
-    const { navRef } = useScrollDownNavbar();
 
   return (
-    <nav ref={ navRef }>
+    <nav>
         <div className="mx-auto max-w-7xl px-2 md:px-6 lg:px-8">
             <div className="relative flex items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
                     <button 
                         type="button" 
-                        className="inline-flex items-center justify-center p-2 text-gray-100 text-3xl" 
+                        className="inline-flex items-center justify-center p-2 text-gray-100 text-xl" 
                         onClick={ onToggleSidebar }
                         aria-controls="mobile-menu"
                     >
@@ -55,7 +53,7 @@ export const NavBar = () => {
                                         return (
                                             <li key={ link.to }>
                                                 <NavLink to={ link.to } 
-                                                    className="text-gray-400 px-5 py-9 block text-xs font-medium uppercase nav-link" 
+                                                    className={ ({ isActive }) => `text-gray-400 px-5 py-9 block text-xs font-medium uppercase nav-link ${ (isActive) ? 'active': '' }`} 
                                                     aria-current="page"
                                                 >
                                                     { link.title }

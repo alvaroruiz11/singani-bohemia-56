@@ -12,6 +12,10 @@ export const UiProvider: FC<Props> = ({ children }) => {
 
   const onToggleSidebar = () => setIsOpenSidebar( !isOpenSidebar );
 
+  const onCloseSidebar = () => setIsOpenSidebar( false );
+
+  const onOpenSidebar = () => setIsOpenSidebar( true  );
+
 
   return (
     <UiContext.Provider
@@ -20,6 +24,8 @@ export const UiProvider: FC<Props> = ({ children }) => {
           isOpenSidebar,
 
           // Methods
+          onCloseSidebar,
+          onOpenSidebar,
           onToggleSidebar,
 
         }}
