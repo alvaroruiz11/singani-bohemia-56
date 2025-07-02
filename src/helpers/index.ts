@@ -1,8 +1,9 @@
 
 
 export { getArtistById } from './getArtistById';
-export { getPaintingById } from './getPaintingById';
+export { getPaintById } from './getPaintById';
 export { getProductById } from './getProductById';
 export { getYears } from './getYears';
+export { isOlderAge } from './isOlderAge';
 export { sleep } from './sleep';
 

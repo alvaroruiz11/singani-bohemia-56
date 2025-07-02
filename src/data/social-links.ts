@@ -1,5 +1,5 @@
 import { IconType } from 'react-icons';
-import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaSpotify, FaTiktok, FaYoutube } from 'react-icons/fa';
 
 interface SocialLink {
     href: string;
@@ -22,5 +22,9 @@ export const socialLinks: SocialLink[] = [
     {
         href: 'https://www.youtube.com/@singanibohemia5628',
         Icon: FaYoutube
+    },
+    {
+        href: 'https://open.spotify.com/user/31viwiwfoehfv7seycopg54np34u?si=201b5b253ed1403d',
+        Icon: FaSpotify
     } 
 ]

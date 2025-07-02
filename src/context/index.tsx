@@ -1,7 +1,7 @@
 
 // permission
-export { PermissionContext } from './permission/PermissionContext';
-export { PermissionProvider } from './permission/PermissionProvider';
+export { AuthContext } from './auth/AuthContext';
+export { AuthProvider } from './auth/AuthProvider';
 
 
 // ui

@@ -1,13 +1,16 @@
-import { UiProvider, PermissionProvider } from './context';
-import { AppRouter } from './router/AppRouter';
+// import { RouterProvider } from 'react-router-dom';
+import { UiProvider, AuthProvider } from './context';
+
+// import { router } from './router'
+import { Router } from './router/Router';
 
 export const Bohemia56App = () => {
     
   return (
-        <PermissionProvider>
+        <AuthProvider>
           <UiProvider>            
-              <AppRouter/>
+              <Router/>
           </UiProvider>
-        </PermissionProvider>
+        </AuthProvider>
   )
 }

@@ -6,7 +6,7 @@ export const getYears = ( yearStart: number ): number[] => {
   const yearEnd = new Date().getFullYear();
 
 
-  for (let i = yearStart; i <= yearEnd; i++) {
+  for (let i = yearEnd; i >= yearStart; i--) {
       years.push( i );
   }
 

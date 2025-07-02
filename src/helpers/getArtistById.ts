@@ -1,7 +1,7 @@
-import { paintings } from '../data/painting';
+import { paints } from '../data/paints';
 
 
 export const getArtistById = ( id: string ) => {
 
-    return paintings.find( painting => painting.artist.id === id )?.artist;
+    return paints.find( painting => painting.artist.id === id )?.artist;
 }

@@ -45,14 +45,10 @@
 
 
 .article-pinture {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('/assets/painting/totem-de-las-alturas.jpg') ;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('/assets/paints/totem-de-las-alturas.jpg') ;
     background-size: cover;
     background-position: center;
     height: 680px;
-}
-
-.article-pinture a {
-    border: 1px solid #ebcd86;
 }
 
 .swiper-button-prev, 
@@ -178,9 +174,62 @@
 
 @media (min-width: 768px) { 
     .article-pinture {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('/assets/painting/abuelos-chiquitanos.jpg') ;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('/assets/paints/abuelos-chiquitanos.jpg') ;
         background-size: cover;
         background-position: center;
         height: 680px;
     }
+    .auth-container {
+        width: 610px;
+    }
 }
+
+
+/* Auth */
+.bg-auth {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.93), rgba(0, 0, 0, 0.90)), url('/assets/bg-auth.jpg');
+    background-position: center;
+    background-size: cover;background-repeat: no-repeat;
+    
+}
+
+.auth-container {
+    width: 350px;
+}
+
+.spinner {
+    transform-origin: center;
+    animation: rotate4 2s linear infinite;
+   }
+   
+   circle {
+    fill: none;
+    
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash4 1.5s ease-in-out infinite;
+   }
+   
+   @keyframes rotate4 {
+    100% {
+     transform: rotate(360deg);
+    }
+   }
+   
+   @keyframes dash4 {
+    0% {
+     stroke-dasharray: 1, 200;
+     stroke-dashoffset: 0;
+    }
+   
+    50% {
+     stroke-dasharray: 90, 200;
+     stroke-dashoffset: -35px;
+    }
+   
+    100% {
+     stroke-dashoffset: -125px;
+    }
+   }
+   
